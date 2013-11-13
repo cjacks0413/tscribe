@@ -11,11 +11,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131029140132) do
+ActiveRecord::Schema.define(version: 20131112040608) do
 
   create_table "transcriptions", force: true do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "video_id"
+    t.text     "data"
   end
 
   create_table "videos", force: true do |t|
