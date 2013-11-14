@@ -10,6 +10,10 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.0.0'
 gem 'simple_form'
 
+# uploading media fiels
+gem "paperclip", "~> 3.0"
+gem "paperclip-dropbox", ">= 1.1.7"
+
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 

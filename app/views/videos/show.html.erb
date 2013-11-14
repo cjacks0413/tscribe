@@ -9,4 +9,6 @@
 	</audio>
 	<%= link_to 'Transcribe This', new_video_transcription_path(@video) %> 
 <h2>More Videos To Come ...</h2>  
+
+<%= render "transcriptions/new", video: @video, transcription: @transcription %> 
 </body>

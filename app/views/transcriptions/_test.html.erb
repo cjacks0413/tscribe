@@ -1,0 +1,6 @@
+<div class="trans_form">
+  <%= simple_form_for [@video, @transcription] do |f| %> 
+  <% f.input :data, :as => :text %>
+  <% f.submit "Submit" %>
+  <% end %> 
+</div>

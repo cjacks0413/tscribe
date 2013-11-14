@@ -1,11 +1,4 @@
-<!DOCTYPE html>
-<html>
-  <body>
-    <%= form_for @video do |f| %>
-      <%= f.simple_fields_for :transcriptions do |t_form| %>
-        <%= t_form.text :transcription %>
-        <%= t_form.button :submit %> 
-      <% end %>
-    <% end %>
-  </body>
-</html>
+<%= form_for ([@video, @transcription]) do |f| %>
+  <%= f.text_area :data %> 
+  <%= f.submit "Submit", class: "btn btn-primary" %>
+<% end %> 

@@ -1,8 +1,9 @@
 Tscribe::Application.routes.draw do
 
   root 'static_pages#home' 
+
   resources :videos do
-  	resources :transcriptions, shallow: true  
+  	resources :transcriptions  
   end 
   
   
