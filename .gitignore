@@ -8,7 +8,7 @@
 /tmp/*
 /db/*.sqlite3
 
-/public/willem.mp3 
+/public/audio
 
 #other 
 /config/config.yml

@@ -3,12 +3,10 @@
 </head>
 <body>
   <h1>This is a video</h1> 
-	<audio controls>
-	  <source src="willem.mp3" type="audio/mp3">
-	  Your browser does not support the audio element.
-	</audio>
-	<%= link_to 'Transcribe This', new_video_transcription_path(@video) %> 
+
 <h2>More Videos To Come ...</h2>  
 
 <%= render "transcriptions/new", video: @video, transcription: @transcription %> 
-</body>
+
+<%= audio_tag "willem.mp3"%> 
+</body> 

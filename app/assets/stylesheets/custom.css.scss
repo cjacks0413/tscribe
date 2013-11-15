@@ -9,7 +9,10 @@ $lightgreen: #d8f0e0;
 $grayLight: #eaeaea;
 
 /* container */ 
-
+.container {
+  height: 100%;
+  width: 70%;
+}
 /* universal */
 
 html {
@@ -49,12 +52,10 @@ h1 {
 }
 
 h2 {
-  font-size: 1.2em;
+  font-size: 1.5em;
   letter-spacing: -1px;
-  margin-bottom: 30px;
-  text-align: center;
   font-weight: normal;
-  color: $grayLight;
+  color: $coral;
 }
 
 p {
@@ -69,4 +70,12 @@ p {
 .trans_form {
 	margin-left: 300px; 
 	margin-top: 200px; 
+}
+
+.vid_list {
+	list-style: none;
+	text-align: center; 	
+	li {
+	  padding: 5px 0;
+	}
 }
