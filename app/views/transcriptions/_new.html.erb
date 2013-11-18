@@ -1,6 +1,6 @@
 <div class="trans_form">
-  <%= simple_form_for [@video, @transcription] do |f| %> 
-  <%= f.input :data, :as => :text %>
-  <%= f.submit "Submit" %>
+  <%= simple_form_for [@video, @transcription] do |f| %>
+  <%= f.input :data, label: 'Transcription', input_html: {class: 'span5', rows: '10' } %>
+  <%= f.submit "Submit", input_html: { class: "btn btn-primary btn-lg active" } %>
   <% end %> 
 </div>

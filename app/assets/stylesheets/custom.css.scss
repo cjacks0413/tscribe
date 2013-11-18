@@ -11,7 +11,7 @@ $grayLight: #eaeaea;
 /* container */ 
 .container {
   height: 100%;
-  width: 70%;
+  width: 80%;
 }
 /* universal */
 
@@ -42,6 +42,7 @@ textarea {
 
 h1, h2, h3, h4, h5, h6 {
   line-height: 1;
+  padding: 10px; 
 }
 
 h1 {
@@ -51,11 +52,11 @@ h1 {
   text-align: center;
 }
 
-h2 {
+h2, .simple_form label  {
   font-size: 1.5em;
   letter-spacing: -1px;
   font-weight: normal;
-  color: $coral;
+  color: $blue;
 }
 
 p {
@@ -63,13 +64,19 @@ p {
   line-height: 1.7em;
 }
 
+
 #trans_text {
 	margin-left: 450px;   
 }
 
+#vid_control {
+   	padding: 6%; 
+   	margin-top: 18%;  
+    float:right;
+}
+
 .trans_form {
-	margin-left: 300px; 
-	margin-top: 200px; 
+	float:right; 
 }
 
 .vid_list {
@@ -79,3 +86,36 @@ p {
 	  padding: 5px 0;
 	}
 }
+
+
+/* header */ 
+header {
+  padding-top: 45px;
+  border-bottom: 1px solid $lightgrey; 
+  color: $coral;
+  font-size: large;
+  background-color: black;  
+  a {
+    color: $lightgrey;
+    &:hover {
+      color: $lightgreen;
+    }
+  }
+  nav {
+    float: right; 
+    list-style: none;
+    margin-right: 20px; 
+    li { 
+      list-style: none; 
+      float: left;
+      margin-left: 10px;
+      margin: 5px;
+    }
+    
+  }
+  #logo { 
+    margin: 5px; 
+    text-transform: uppercase; 
+    font-size: 1.7em;
+  }  
+} 
