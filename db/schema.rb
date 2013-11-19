@@ -11,13 +11,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131114193713) do
+ActiveRecord::Schema.define(version: 20131119151333) do
+
+  create_table "segments", force: true do |t|
+    t.integer  "start_time"
+    t.integer  "stop_time"
+    t.integer  "video_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "transcriptions", force: true do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "video_id"
     t.text     "data"
+    t.integer  "segment_id"
   end
 
   create_table "videos", force: true do |t|

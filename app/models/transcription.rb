@@ -1,3 +1,3 @@
 class Transcription < ActiveRecord::Base
-  belongs_to :video 
+    belongs_to :segment 
 end

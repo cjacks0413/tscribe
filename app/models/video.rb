@@ -1,4 +1,5 @@
 class Video < ActiveRecord::Base
-  has_many :transcriptions
+  has_many :segments 
+  has_many :transcriptions, through: :segments
 end
 
