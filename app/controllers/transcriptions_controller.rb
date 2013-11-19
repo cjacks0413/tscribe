@@ -1,16 +1,17 @@
 class TranscriptionsController < ApplicationController
  
   def new
-    @video = Video.find(params[:video_id]) 
-    @transcription = @video.transcriptions.build 
-#    render partial: "transcriptions/new", locals: {video: @video, transcription: @transcription}
+    @segment = Segment.find(params[:segment_id])
+    @video = Video.find(@segment.video_id) 
+    @transcription = @segment.transcriptions.build 
   end
   
   def create
-    @video = Video.find(params[:video_id])
-    @transcription = @video.transcriptions.build(trans_params)
+    @segment = Segment.find(params[:segment_id])
+	@video = Video.find(@segment.video_id)
+    @transcription = @segment.transcriptions.build(trans_params)
     if @transcription.save
-      redirect_to videos_path
+      redirect_to segment_path(@video.id)
     else
       redirect_to new_transcription_review_path(@restroom)
     end
@@ -20,6 +21,6 @@ class TranscriptionsController < ApplicationController
   private
   
     def trans_params
-      params.require(:transcription).permit(:data, :video_id)
+      params.require(:transcription).permit(:data, :segment_id)
     end 
 end

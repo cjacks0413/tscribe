@@ -4,8 +4,7 @@
 	<div class="col-md-3">
 		<ul class="vid_list"> 
 		<% @videos.each do |v| %>
-<!--			<h2><li><%= link_to v.title, video_path(v) %></h2></li> --> 
-			<h2><li><%= link_to v.title, preview_video_path(v) %></h2></li> 
+			<h2><li><%= link_to v.title, segment_path(v.id) %></h2></li> 
 
 			<div class="vid_info">
 				<li>Author of Lecture Here</li> 

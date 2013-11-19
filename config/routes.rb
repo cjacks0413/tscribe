@@ -2,13 +2,29 @@ Tscribe::Application.routes.draw do
 
   root 'static_pages#home' 
 
-  resources :videos do
-	member do
-		get 'preview' 
-	end
-  	resources :transcriptions  
-  end 
-  
+
+#   resources :videos do
+#     get 'transcriptions', on: :member 
+#   end
+#   
+#   resources :segments do
+#     resources :transcriptions
+#   end	
+
+   resources :videos do
+ 	 member do
+ 		get 'preview' 
+ 	 end
+   end
+   
+	resources :segments do
+	  resources :transcriptions
+	end 
+	
+#   	resources :transcriptions 
+#   	resources :segments  
+#   end 
+#   
   
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

@@ -1,4 +1,16 @@
-<%= form_for ([@video, @transcription]) do |f| %>
-  <%= f.text_area :data %> 
-  <%= f.submit "Submit", class: "btn btn-primary" %>
-<% end %> 
+<h1><%= @video.title %></h1> 
+<div class="row">
+	<div class="trans_form">
+  		<%= simple_form_for [@segment, @transcription] do |f| %>
+		<%= f.input :data, label: 'Transcription', input_html: {class: 'span5', rows: '10' } %>
+		<%= f.submit "Submit", input_html: { class: "btn btn-primary btn-lg active" } %>
+		<% end %> 
+	</div>
+	<div id="vid_control"> 
+		<%= audio_tag "willem.mp3"%> 
+		<audio controls>
+			<source src="willem.mp3" type="audio/mp3">
+			Your browser does not support the audio element.
+		</audio> 
+	</div> 
+</div>

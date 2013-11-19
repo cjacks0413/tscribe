@@ -22,7 +22,7 @@ class VideosController < ApplicationController
   
   def show
     @video = Video.find(params[:id]) 
-    @transcription = @video.transcriptions.build 
+    @transcriptions = @video.transcriptions
   end  
 
   def preview

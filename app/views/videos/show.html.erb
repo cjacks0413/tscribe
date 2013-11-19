@@ -1,13 +1,7 @@
 <h1><%= @video.title %></h1> 
 <div class="row">
-	<div class=""col-md-3 col-md-offset-3">
-	<%= render "transcriptions/new", video: @video, transcription: @transcription %> 
-	</div> 
-	<div id="vid_control"> 
-		<%= audio_tag "willem.mp3"%> 
-		<audio controls>
-			<source src="willem.mp3" type="audio/mp3">
-			Your browser does not support the audio element.
-		</audio> 
-	</div> 
-</div> 
+	<% @transcriptions.each do |t| %>
+	<%= t.data %> 
+	<% end %> 
+</div>
+

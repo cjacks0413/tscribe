@@ -1,0 +1,6 @@
+<% @segments.each do |s| %>
+<ul>
+<li><%= link_to s.start_time, segment_path(s) %></li>
+</li><%= s.stop_time %></li>
+</ul>
+<% end %> 

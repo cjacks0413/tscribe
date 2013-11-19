@@ -1,0 +1,8 @@
+<h2>Audio Segments for <%= @video.title%></h2> 
+<div class="row">
+<% @segments.each do |s| %>
+	<ul>
+	<li><%= link_to "#{s.start_time} - #{s.stop_time}", new_segment_transcription_path(s) %> </li> 
+	</ul>
+<% end %> 
+</div>
