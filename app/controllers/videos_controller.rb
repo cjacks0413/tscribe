@@ -25,6 +25,10 @@ class VideosController < ApplicationController
     @transcription = @video.transcriptions.build 
   end  
 
+  def preview
+	@video = Video.find(params[:id]) 
+  end
+
   private
     
     def video_params

@@ -3,6 +3,9 @@ Tscribe::Application.routes.draw do
   root 'static_pages#home' 
 
   resources :videos do
+	member do
+		get 'preview' 
+	end
   	resources :transcriptions  
   end 
   
