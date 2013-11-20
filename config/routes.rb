@@ -1,6 +1,6 @@
 Tscribe::Application.routes.draw do
 
-  root 'static_pages#home' 
+  root 'videos#index' 
 
 
 #   resources :videos do

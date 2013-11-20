@@ -6,11 +6,12 @@
 		<%= f.submit "Submit", input_html: { class: "btn btn-primary btn-lg active" } %>
 		<% end %> 
 	</div>
-	<div id="vid_control"> 
-		<%= audio_tag "willem.mp3"%> 
-		<audio controls>
-			<source src="willem.mp3" type="audio/mp3">
+		<audio id="segment" data-start="<%=@segment.start_time%>" data-stop="<%=@segment.stop_time%>"controls>
+			<source src="https://dl.dropboxusercontent.com/u/86984103/willem.mp3" type="audio/mp3">
 			Your browser does not support the audio element.
 		</audio> 
+	<div id="seg_info">
+		<%= @video.title %> from <%= Time.at(@segment.start_time).utc.strftime("%H:%M:%S")%> to 
+				<%= Time.at(@segment.stop_time).utc.strftime("%H:%M:%S") %>
 	</div> 
 </div>

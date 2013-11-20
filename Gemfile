@@ -9,6 +9,8 @@ gem 'bootstrap-sass', '2.3.2.0'
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.0.0'
 gem 'simple_form'
+gem 'faker', '1.1.2' 
+gem 'populator' 
 
 # uploading media fiels
 gem "paperclip", "~> 3.0"
