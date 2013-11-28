@@ -2,7 +2,8 @@
 <div class="row">
 <% @segments.each do |s| %>
 	<ul>
-	<li><%= link_to "#{s.start_time} - #{s.stop_time}", new_segment_transcription_path(s) %> </li> 
+<!--	<li><%= link_to "#{s.start_time} - #{s.stop_time}", new_segment_transcription_path(s) %> </li> --> 
+	<li><%= link_to "#{Time.at(s.start_time).utc.strftime("%H:%M:%S")} - #{Time.at(s.stop_time).utc.strftime("%H:%M:%S")}", new_segment_transcription_path(s) %> </li> 
 	</ul>
 <% end %> 
 </div>
